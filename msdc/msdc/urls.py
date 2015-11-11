@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 
 urlpatterns = [
-    url(r'^index/$', include('homepage.urls')),
+    url(r'^home/$', include('homepage.urls')),
     url(r'^members/$', include('members.urls')),
     url(r'^about/$', include('about.urls')),
 ]
