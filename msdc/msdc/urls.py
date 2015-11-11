@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 
+from homepage import urls as homepage_urls
+from members import urls as members_urls
+from about import urls as about_urls
+
 urlpatterns = [
-    url(r'^home/$', include('homepage.urls')),
-    url(r'^members/$', include('members.urls')),
-    url(r'^about/$', include('about.urls')),
+    url(r'^home/$', include(homepage_urls)),
+    url(r'^members/$', include(members_urls)),
+    url(r'^about/$', include(about_urls)),
 ]
